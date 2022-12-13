@@ -1,0 +1,160 @@
+/* Root Selector with Variables*/
+:root{
+    --hue-neutral: 200;
+    --hue-wrong: 0; 
+    --hue-correct: 150; 
+}
+
+/* Attributes of body */
+body {
+    --hue: var(--hue-neutral); /* Hue Neutral varialble for Blue Background*/
+    background-color: hsl(var(--hue),50%, 15%);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+body.correct{
+    --hue: var(--hue-correct); /* Hue Correct varialble for Green background*/
+    background-color: hsl(var(--hue), 100%, 15%);
+}
+
+body.wrong{
+    --hue: var(--hue-wrong); /* Hue Wrong varialble for Red Background*/
+    background-color: hsl(var(--hue), 100%, 15%);
+}
+
+/* Attributes of H3 tag*/
+
+h3 {
+    color: white;
+    font-size: 150%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 150px;
+}
+
+/* Attributes of Div tag's first P child*/
+
+div p {
+    color: blue;
+    font-size: 130%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Attributes of Main Container*/
+
+.container {
+    width: 600px;
+    max-width: 100%;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+/* Button Grid*/
+
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 5px;
+    margin: 5px 0;
+}
+
+/* Attributes of Question ID*/
+
+#question {
+    font-size: 150%;
+    font-weight: bold;
+    color:red;
+}
+
+/* Attributes of Button Class*/
+
+.btn {
+    --hue: var(--hue-neutral);
+    border: 1px solid black;
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 12px;
+    margin: 5px;
+    color: white;
+    outline: none;
+    font-size: 20px;
+}
+
+
+.btn:hover {
+    border: 2px solid black;
+    box-shadow: 10px 10px 10px gray;
+}
+
+.show:hover {
+    border-color: black;
+}
+
+.btn.correct {
+    --hue: var(--hue-correct);
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    border: 2px solid black;
+    box-shadow: 10px 10px 10px gray;
+}
+
+.btn.wrong {
+    --hue: var(--hue-wrong);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.start-btn, .next-btn, .category-btn {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px, 20px;
+    text-align: center;
+}
+
+/* Attributes of Anchor Tag*/
+a {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px, 20px;
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 12px;
+    margin-left: 230px;
+    text-decoration: none;
+    color: white;
+    outline: none;
+}
+a:hover {
+    border: 2px solid black;
+    box-shadow: 10px 10px 10px gray;
+}
+/* Attributes of Controls class*/
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hide Class*/
+.hide {
+    display: none;
+}
+
+/* Show Class*/
+.show {
+    display: contents;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>User Information</title>
+        <link rel="stylesheet" href="userinformation.css">
+    </head>
+    <header>
+        <h2>Please Enter Your Details in Below Form</h2>
+    </header>
+    <body>
+         <form action=""class="form" >
+                    <table>
+                        <tr>
+                            <td>
+                                Name :
+                            </td>
+                            <td>
+                                <input type="text" id="u_name" placeholder="Name" name="username">
+                            </td>
+                        </tr>
+                            
+                        <tr>
+                            <td>
+                                Email :
+                            </td>
+                            <td>
+                                <input type="mail" id="u_email" placeholder="Enter Your Email" name="email">
+                            </td>
+                        </tr>
+                                
+                    </table>
+                    <div><br> <button id="btn" class="btn"><a href="scienceandtechnology.html" target="_blank">Register</a></button></div>
+
+            </form>
+
+            <script>
+
+                var regPeople =  []
+
+                function registerUser(){
+                    var registername = document.getElementById("u_name").value;
+                    var registeremail = document.getElementById("u_email").value;
+                    var newuser = {
+                        username: registername,
+                        email: registeremail    
+                    }
+                    regPeople.push(newuser)
+                    console.log(regPeople)
+                }
+
+                localStorage.setItem('userDetails', JSON.stringify(regPeople));
+
+            </script>
+
+    </body>
+</html>
